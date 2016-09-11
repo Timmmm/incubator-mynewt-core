@@ -7,6 +7,10 @@
 #ifndef lundump_h
 #define lundump_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 
 #include "lobject.h"
@@ -56,5 +60,9 @@ LUAI_FUNC void luaU_print (const Proto* f, int full);
 
 /* target lua_Number is integral but a constant is non-integer */
 #define LUA_ERR_CC_NOTINTEGER 102
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

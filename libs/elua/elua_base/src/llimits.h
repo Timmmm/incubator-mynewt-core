@@ -7,6 +7,10 @@
 #ifndef llimits_h
 #define llimits_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #include <limits.h>
 #include <stddef.h>
@@ -123,6 +127,10 @@ typedef lu_int32 Instruction;
 #define condhardstacktests(x)	((void)0)
 #else
 #define condhardstacktests(x)	x
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

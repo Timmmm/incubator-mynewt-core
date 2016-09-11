@@ -20,6 +20,10 @@
 #ifndef H_BLE_
 #define H_BLE_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 /* XXX: some or all of these should not be here */
 #include "os/os.h"
@@ -228,5 +232,9 @@ enum ble_error_codes
 #define BLE_ADDR_TYPE_RPA_RND_DEFAULT   (3)
 
 int ble_err_from_os(int os_err);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* H_BLE_ */

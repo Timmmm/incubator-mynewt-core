@@ -20,6 +20,10 @@
 #ifndef H_BLE_EDDYSTONE_
 #define H_BLE_EDDYSTONE_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 struct ble_hs_adv_fields;
 
@@ -52,5 +56,9 @@ int ble_eddystone_set_adv_data_uid(struct ble_hs_adv_fields *adv_fields,
 int ble_eddystone_set_adv_data_url(struct ble_hs_adv_fields *adv_fields,
                                    uint8_t url_scheme, char *url_body,
                                    uint8_t url_body_len, uint8_t suffix);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

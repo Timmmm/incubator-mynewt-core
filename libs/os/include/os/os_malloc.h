@@ -20,6 +20,10 @@
 #ifndef H_OS_MALLOC_
 #define H_OS_MALLOC_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "os/os_heap.h"
 
 #undef  malloc
@@ -30,5 +34,9 @@
 
 #undef  realloc
 #define realloc  os_realloc
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

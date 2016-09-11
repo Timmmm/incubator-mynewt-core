@@ -20,6 +20,10 @@
 #ifndef _OS_SEM_H_
 #define _OS_SEM_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "os/queue.h"
 
 struct os_sem
@@ -48,5 +52,9 @@ os_error_t os_sem_release(struct os_sem *sem);
 
 /* Pend (wait) for a semaphore */
 os_error_t os_sem_pend(struct os_sem *sem, uint32_t timeout);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  /* _OS_MUTEX_H_ */

@@ -7,6 +7,10 @@
 #ifndef _CTYPE_H
 #define _CTYPE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <klibc/extern.h>
 #include <klibc/inline.h>
 
@@ -82,5 +86,9 @@ __extern_inline int tolower(int __c)
 {
 	return isupper(__c) ? (__c | 32) : __c;
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif				/* _CTYPE_H */

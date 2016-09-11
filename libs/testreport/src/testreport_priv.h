@@ -20,6 +20,10 @@
 #ifndef H_TESTREPORT_PRIV_
 #define H_TESTREPORT_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stddef.h>
 #include <inttypes.h>
 
@@ -44,5 +48,9 @@ int tr_io_delete(const char *path);
 
 int tr_io_mkdir(const char *path);
 int tr_io_rmdir(const char *path);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

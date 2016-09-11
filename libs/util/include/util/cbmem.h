@@ -19,6 +19,10 @@
 #ifndef __UTIL_CBMEM_H__ 
 #define __UTIL_CBMEM_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <os/os.h>
 
 struct cbmem_entry_hdr {
@@ -62,5 +66,9 @@ int cbmem_read(struct cbmem *cbmem, struct cbmem_entry_hdr *hdr, void *buf,
 int cbmem_walk(struct cbmem *cbmem, cbmem_walk_func_t walk_func, void *arg);
 
 int cbmem_flush(struct cbmem *);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __UTIL_CBMEM_H__ */

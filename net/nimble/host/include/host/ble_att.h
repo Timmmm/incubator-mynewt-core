@@ -20,6 +20,10 @@
 #ifndef H_BLE_ATT_
 #define H_BLE_ATT_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "os/queue.h"
 struct os_mbuf;
 
@@ -100,5 +104,9 @@ int ble_att_svr_write_local(uint16_t attr_handle, struct os_mbuf *om);
 uint16_t ble_att_mtu(uint16_t conn_handle);
 uint16_t ble_att_preferred_mtu(void);
 int ble_att_set_preferred_mtu(uint16_t mtu);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

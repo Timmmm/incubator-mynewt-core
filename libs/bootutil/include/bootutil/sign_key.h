@@ -20,6 +20,10 @@
 #ifndef __BOOTUTIL_SIGN_KEY_H_
 #define __BOOTUTIL_SIGN_KEY_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 
 struct bootutil_key {
@@ -29,5 +33,9 @@ struct bootutil_key {
 
 extern const struct bootutil_key bootutil_keys[];
 extern const int bootutil_key_cnt;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __BOOTUTIL_SIGN_KEY_H_ */

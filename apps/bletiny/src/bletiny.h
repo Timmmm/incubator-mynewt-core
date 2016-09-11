@@ -20,6 +20,10 @@
 #ifndef H_BLETINY_PRIV_
 #define H_BLETINY_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "nimble/nimble_opt.h"
 #include "log/log.h"
@@ -203,5 +207,9 @@ uint16_t chr_end_handle(const struct bletiny_svc *svc,
                         const struct bletiny_chr *chr);
 int chr_is_empty(const struct bletiny_svc *svc, const struct bletiny_chr *chr);
 void print_conn_desc(const struct ble_gap_conn_desc *desc);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

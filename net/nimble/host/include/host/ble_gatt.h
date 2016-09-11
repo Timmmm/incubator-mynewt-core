@@ -20,6 +20,10 @@
 #ifndef H_BLE_GATT_
 #define H_BLE_GATT_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "host/ble_att.h"
 struct ble_hs_conn;
@@ -446,5 +450,9 @@ int ble_gatts_find_chr(const void *svc_uuid128, const void *chr_uuid128,
                        uint16_t *out_def_handle, uint16_t *out_val_handle);
 int ble_gatts_find_dsc(const void *svc_uuid128, const void *chr_uuid128,
                        const void *dsc_uuid128, uint16_t *out_dsc_handle);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

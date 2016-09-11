@@ -20,7 +20,15 @@
 #ifndef __UTIL_TEST_PRIV_
 #define __UTIL_TEST_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int cbmem_test_suite(void);
 int hex_fmt_test_suite(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

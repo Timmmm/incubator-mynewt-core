@@ -20,6 +20,10 @@
 #ifndef H_HCI_TRANSPORT_
 #define H_HCI_TRANSPORT_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 struct os_mbuf;
 
@@ -165,5 +169,9 @@ void ble_hci_trans_cfg_hs(ble_hci_trans_rx_cmd_fn *cmd_cb,
  *                              A BLE_ERR_[...] error code on failure.
  */
 int ble_hci_trans_reset(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* H_HCI_TRANSPORT_ */

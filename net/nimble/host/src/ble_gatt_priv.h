@@ -20,6 +20,10 @@
 #ifndef H_BLE_GATT_PRIV_
 #define H_BLE_GATT_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "stats/stats.h"
 #include "host/ble_gatt.h"
 struct ble_att_read_type_adata;
@@ -150,5 +154,9 @@ int ble_gatts_conn_can_alloc(void);
 int ble_gatts_conn_init(struct ble_gatts_conn *gatts_conn);
 int ble_gatts_start(void);
 int ble_gatts_init(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -20,6 +20,10 @@
 #ifndef _OS_MEMPOOL_H_
 #define _OS_MEMPOOL_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "os/os.h"
 #include "os/queue.h"
 
@@ -90,5 +94,9 @@ void *os_memblock_get(struct os_mempool *mp);
 
 /* Put the memory block back into the pool */
 os_error_t os_memblock_put(struct os_mempool *mp, void *block_addr);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  /* _OS_MEMPOOL_H_ */

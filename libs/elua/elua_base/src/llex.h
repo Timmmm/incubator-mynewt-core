@@ -7,6 +7,10 @@
 #ifndef llex_h
 #define llex_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "lobject.h"
 #include "lzio.h"
 
@@ -77,5 +81,9 @@ LUAI_FUNC void luaX_lexerror (LexState *ls, const char *msg, int token);
 LUAI_FUNC void luaX_syntaxerror (LexState *ls, const char *s);
 LUAI_FUNC const char *luaX_token2str (LexState *ls, int token);
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

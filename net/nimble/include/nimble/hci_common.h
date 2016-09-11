@@ -20,6 +20,10 @@
 #ifndef H_BLE_HCI_COMMON_
 #define H_BLE_HCI_COMMON_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "ble.h"
 
 /*
@@ -762,5 +766,9 @@ struct hci_add_dev_to_resolving_list {
 
 /* External data structures */
 extern const uint8_t g_ble_hci_le_cmd_len[BLE_HCI_NUM_LE_CMDS];
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* H_BLE_HCI_COMMON_ */

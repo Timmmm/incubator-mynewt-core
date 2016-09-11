@@ -7,6 +7,10 @@
 #ifndef lmem_h
 #define lmem_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #include <stddef.h>
 
@@ -44,6 +48,10 @@ LUAI_FUNC void *luaM_toobig (lua_State *L);
 LUAI_FUNC void *luaM_growaux_ (lua_State *L, void *block, int *size,
                                size_t size_elem, int limit,
                                const char *errormsg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 

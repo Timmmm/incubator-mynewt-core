@@ -19,6 +19,10 @@
 #ifndef __UTIL_TPQ_H__ 
 #define __UTIL_TPQ_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <os/queue.h>
 #include <os/os_eventq.h>
 
@@ -63,5 +67,9 @@ struct tpq_elem *tpq_get(struct tpq *tpq);
  * @return int 
  */
 void tpq_init(struct tpq *tpq, uint8_t ev_type, void *ev_arg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __UTIL_TPQ_H__ */

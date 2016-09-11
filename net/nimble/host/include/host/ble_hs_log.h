@@ -20,6 +20,10 @@
 #ifndef H_BLE_HS_LOG_
 #define H_BLE_HS_LOG_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "log/log.h"
 struct os_mbuf;
 
@@ -35,5 +39,9 @@ extern struct log ble_hs_log;
 
 void ble_hs_log_mbuf(const struct os_mbuf *om);
 void ble_hs_log_flat_buf(const void *data, int len);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -20,6 +20,10 @@
 #ifndef H_BLE_UUID_
 #define H_BLE_UUID_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 struct os_mbuf;
 
@@ -41,5 +45,9 @@ int ble_uuid_16_to_128(uint16_t uuid16, void *dst);
     0x00, 0x10, 0x00, 0x00, (uuid16) & 0xff, (((uuid16) & 0xff00) >> 8),    \
     0x00, 0x00                                                              \
 })
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _BLE_HOST_UUID_H */

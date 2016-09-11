@@ -20,6 +20,10 @@
 #ifndef H_BLE_GAP_
 #define H_BLE_GAP_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "host/ble_hs.h"
 struct hci_le_conn_complete;
@@ -561,5 +565,9 @@ int ble_gap_pair_initiate(uint16_t conn_handle);
 int ble_gap_encryption_initiate(uint16_t conn_handle, const uint8_t *ltk,
                                 uint16_t ediv, uint64_t rand_val, int auth);
 int ble_gap_conn_rssi(uint16_t conn_handle, int8_t *out_rssi);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

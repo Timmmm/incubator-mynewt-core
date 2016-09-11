@@ -8,6 +8,10 @@
 #ifndef lzio_h
 #define lzio_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "lua.h"
 
 #include "lmem.h"
@@ -68,5 +72,9 @@ struct Zio {
 
 
 LUAI_FUNC int luaZ_fill (ZIO *z);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

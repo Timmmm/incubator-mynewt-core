@@ -1,6 +1,10 @@
 #ifndef H_BLE_HCI_RAM_
 #define H_BLE_HCI_RAM_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "nimble/ble_hci_trans.h"
 
 struct ble_hci_ram_cfg {
@@ -26,5 +30,9 @@ struct ble_hci_ram_cfg {
 extern const struct ble_hci_ram_cfg ble_hci_ram_cfg_dflt;
 
 int ble_hci_ram_init(const struct ble_hci_ram_cfg *cfg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

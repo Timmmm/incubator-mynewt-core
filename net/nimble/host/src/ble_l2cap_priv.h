@@ -20,6 +20,10 @@
 #ifndef H_L2CAP_PRIV_
 #define H_L2CAP_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "host/ble_l2cap.h"
 #include <inttypes.h>
 #include "stats/stats.h"
@@ -105,5 +109,9 @@ int ble_l2cap_tx(struct ble_hs_conn *conn, struct ble_l2cap_chan *chan,
                  struct os_mbuf *txom);
 
 int ble_l2cap_init(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

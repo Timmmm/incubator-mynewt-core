@@ -20,6 +20,10 @@
 #ifndef H_ENDIAN_
 #define H_ENDIAN_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 
 #if __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
@@ -89,4 +93,8 @@
 #endif
 
 #endif
+#ifdef __cplusplus
+}
+#endif
+
 #endif

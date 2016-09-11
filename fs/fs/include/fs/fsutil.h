@@ -20,10 +20,18 @@
 #ifndef H_FSUTIL_
 #define H_FSUTIL_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 
 int fsutil_read_file(const char *path, uint32_t offset, uint32_t len,
                      void *dst, uint32_t *out_len);
 int fsutil_write_file(const char *path, const void *data, uint32_t len);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

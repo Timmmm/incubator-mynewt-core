@@ -20,6 +20,10 @@
 #ifndef H_LOADER_
 #define H_LOADER_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 struct image_header;
 
@@ -80,5 +84,9 @@ boot_go(const struct boot_req *req, struct boot_rsp *rsp);
 #define SPLIT_GO_ERR                (-2)
 int
 split_go(int loader_slot, int split_slot, void **entry);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -20,6 +20,10 @@
 #ifndef SPLIT_PRIV_H
 #define SPLIT_PRIV_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int
 split_conf_init(void);
 
@@ -34,6 +38,10 @@ split_write_split(splitMode_t mode);
 
 splitStatus_t
 split_check_status(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SPLIT_PRIV_H */
 

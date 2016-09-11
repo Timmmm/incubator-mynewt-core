@@ -19,6 +19,10 @@
 #ifndef __SYS_CONFIG_H_
 #define __SYS_CONFIG_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <os/queue.h>
 #include <stdint.h>
 
@@ -94,5 +98,9 @@ struct conf_store {
     SLIST_ENTRY(conf_store) cs_next;
     const struct conf_store_itf *cs_itf;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __SYS_CONFIG_H_ */

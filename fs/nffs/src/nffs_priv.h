@@ -20,6 +20,10 @@
 #ifndef H_NFFS_PRIV_
 #define H_NFFS_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "log/log.h"
 #include "os/queue.h"
@@ -511,6 +515,10 @@ int nffs_write_to_file(struct nffs_file *file, const void *data, int len);
 #else
 #define NFFS_LOG(lvl, ...) \
     LOG_ ## lvl(&nffs_log, LOG_MODULE_NFFS, __VA_ARGS__)
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

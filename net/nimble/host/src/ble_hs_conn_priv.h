@@ -20,6 +20,10 @@
 #ifndef H_BLE_HS_CONN_
 #define H_BLE_HS_CONN_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "ble_l2cap_priv.h"
 #include "ble_gatt_priv.h"
@@ -91,5 +95,9 @@ void ble_hs_conn_addrs(const struct ble_hs_conn *conn,
                        struct ble_hs_conn_addrs *addrs);
 
 int ble_hs_conn_init(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

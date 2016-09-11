@@ -20,6 +20,10 @@
 #ifndef H_BLE_GAP_CONN_
 #define H_BLE_GAP_CONN_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "stats/stats.h"
 #include "host/ble_gap.h"
@@ -96,5 +100,9 @@ void ble_gap_conn_broken(uint16_t conn_handle, int reason);
 int32_t ble_gap_heartbeat(void);
 
 int ble_gap_init(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

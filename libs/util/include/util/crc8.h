@@ -24,9 +24,17 @@
 #ifndef _UTIL_CRC8_H_
 #define _UTIL_CRC8_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 
 uint8_t crc8_init(void);
 uint8_t crc8_calc(uint8_t val, void *buf, int cnt);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -38,6 +38,10 @@
 #ifndef __CORE_CAFUNC_H__
 #define __CORE_CAFUNC_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 /* ###########################  Core Function Access  ########################### */
 /** \ingroup  CMSIS_Core_FunctionInterface
@@ -1157,5 +1161,9 @@ __attribute__( ( always_inline ) ) __STATIC_INLINE void __v7_clean_inv_dcache_al
 
 /*@} end of CMSIS_Core_RegAccFunctions */
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __CORE_CAFUNC_H__ */

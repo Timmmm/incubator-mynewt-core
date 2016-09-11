@@ -7,6 +7,10 @@
 #ifndef ldebug_h
 #define ldebug_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #include "lstate.h"
 
@@ -29,5 +33,9 @@ LUAI_FUNC void luaG_runerror (lua_State *L, const char *fmt, ...);
 LUAI_FUNC void luaG_errormsg (lua_State *L);
 LUAI_FUNC int luaG_checkcode (const Proto *pt);
 LUAI_FUNC int luaG_checkopenop (Instruction i);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

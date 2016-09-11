@@ -19,6 +19,10 @@
 #ifndef __SYS_MN_SOCKET_OPS_H_
 #define __SYS_MN_SOCKET_OPS_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 
 /*
@@ -78,5 +82,9 @@ mn_socket_newconn(struct mn_socket *s, struct mn_socket *new)
         return -1;
     }
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __SYS_MN_SOCKET_OPS_H_ */

@@ -20,6 +20,10 @@
 #ifndef _OS_ARCH_SIM_H
 #define _OS_ARCH_SIM_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <mcu/mcu_sim.h>
 
 struct os_task;
@@ -70,5 +74,9 @@ int os_arch_in_critical(void);
 os_error_t os_arch_os_init(void);
 void os_arch_os_stop(void);
 os_error_t os_arch_os_start(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _OS_ARCH_SIM_H */

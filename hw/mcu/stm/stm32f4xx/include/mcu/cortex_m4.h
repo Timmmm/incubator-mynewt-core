@@ -20,8 +20,16 @@
 #ifndef __MCU_CORTEX_M4_H__
 #define __MCU_CORTEX_M4_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "mcu/stm32f4xx.h"
 
 #define OS_TICKS_PER_SEC    (1000)
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __MCU_CORTEX_M4_H__ */

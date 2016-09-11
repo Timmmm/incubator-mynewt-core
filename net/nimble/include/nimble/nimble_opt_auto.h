@@ -20,6 +20,10 @@
 #ifndef H_NIMBLE_OPT_AUTO_
 #define H_NIMBLE_OPT_AUTO_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "nimble/nimble_opt.h"
 
 /***
@@ -101,6 +105,10 @@
 #if NIMBLE_OPT_SM_SC
 #undef NIMBLE_OPT_SM
 #define NIMBLE_OPT_SM                           1
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

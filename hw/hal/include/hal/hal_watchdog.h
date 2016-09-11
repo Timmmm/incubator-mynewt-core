@@ -20,6 +20,10 @@
 #ifndef _HAL_WATCHDOG_H_
 #define _HAL_WATCHDOG_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /*
  * Set a recurring watchdog timer to fire no sooner than in 'expire_secs'
  * seconds. Watchdog should be tickled periodically with a frequency
@@ -51,5 +55,9 @@ int hal_watchdog_stop(void);
  * Tickles the watchdog. Needs to be done before 'expire_secs' fires.
  */
 void hal_watchdog_tickle(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _HAL_WATCHDOG_H_ */

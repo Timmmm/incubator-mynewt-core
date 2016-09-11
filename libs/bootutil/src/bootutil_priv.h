@@ -20,6 +20,10 @@
 #ifndef H_BOOTUTIL_PRIV_
 #define H_BOOTUTIL_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "bootutil/image.h"
 
 #define BOOT_EFLASH     1
@@ -70,6 +74,10 @@ void boot_scratch_magic(struct boot_img_trailer *bit);
 
 struct boot_req;
 void boot_req_set(struct boot_req *req);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 

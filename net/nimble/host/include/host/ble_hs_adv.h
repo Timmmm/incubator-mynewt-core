@@ -20,6 +20,10 @@
 #ifndef H_BLE_HS_ADV_
 #define H_BLE_HS_ADV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 
 /** Max field payload size (account for 2-byte header). */
@@ -173,5 +177,9 @@ struct ble_hs_adv_fields {
 #define BLE_HS_ADV_SVC_DATA_UUID32_MIN_LEN      4
 
 #define BLE_HS_ADV_SVC_DATA_UUID128_MIN_LEN     16
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

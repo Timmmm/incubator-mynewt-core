@@ -9,6 +9,10 @@
 #ifndef lua_h
 #define lua_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdarg.h>
 #include <stddef.h>
 
@@ -395,5 +399,9 @@ int lua_main( int argc, char **argv );
 * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************************/
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

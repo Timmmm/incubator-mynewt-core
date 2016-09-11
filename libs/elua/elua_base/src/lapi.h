@@ -7,10 +7,18 @@
 #ifndef lapi_h
 #define lapi_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #include "lobject.h"
 
 
 LUAI_FUNC void luaA_pushobject (lua_State *L, const TValue *o);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -19,6 +19,10 @@
 #ifndef __CONSOLE_H__
 #define __CONSOLE_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdarg.h>
 
 typedef void (*console_rx_cb)(void);
@@ -34,5 +38,9 @@ void console_printf(const char *fmt, ...)
     __attribute__ ((format (printf, 1, 2)));;
 
 extern int console_is_midline;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __CONSOLE_H__ */

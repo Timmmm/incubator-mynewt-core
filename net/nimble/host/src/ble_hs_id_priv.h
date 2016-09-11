@@ -20,11 +20,19 @@
 #ifndef H_BLE_HS_ID_PRIV_
 #define H_BLE_HS_ID_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 
 void ble_hs_id_set_pub(const uint8_t *pub_addr);
 int ble_hs_id_addr(uint8_t id_addr_type, const uint8_t **out_id_addr,
                    int *out_is_nrpa);
 int ble_hs_id_use_addr(uint8_t addr_type);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

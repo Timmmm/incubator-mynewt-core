@@ -19,6 +19,10 @@
 #ifndef __UTIL_STATS_H__ 
 #define __UTIL_STATS_H__ 
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <os/queue.h>
 #include <stdint.h>
 
@@ -123,6 +127,10 @@ int stats_nmgr_register_group(void);
 #endif 
 #ifdef SHELL_PRESENT
 int stats_shell_register(void);
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* __UTIL_STATS_H__ */

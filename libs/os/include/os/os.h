@@ -20,6 +20,10 @@
 #ifndef _OS_H
 #define _OS_H 
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdlib.h>
 //#include <stdint.h>
 
@@ -95,5 +99,9 @@ void os_init_idle_task(void);
 #include "os/os_sem.h"
 #include "os/os_mempool.h"
 #include "os/os_mbuf.h"
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _OS_H */

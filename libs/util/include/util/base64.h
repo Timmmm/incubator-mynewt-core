@@ -19,6 +19,10 @@
 #ifndef __UTIL_BASE64_H
 #define __UTIL_BASE64_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 #include <string.h>
 
@@ -28,5 +32,9 @@ int base64_pad(char *, int);
 int base64_decode_len(const char *str);
 
 #define BASE64_ENCODE_SIZE(__size) ((((__size) * 4) / 3) + 4)
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __UTIL_BASE64_H__ */

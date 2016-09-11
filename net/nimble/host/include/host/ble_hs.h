@@ -20,6 +20,10 @@
 #ifndef H_BLE_HS_
 #define H_BLE_HS_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "nimble/hci_common.h"
 #include "host/ble_att.h"
@@ -243,5 +247,9 @@ extern const struct ble_hs_cfg ble_hs_cfg_dflt;
 int ble_hs_synced(void);
 int ble_hs_start(void);
 int ble_hs_init(struct os_eventq *app_evq, struct ble_hs_cfg *cfg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

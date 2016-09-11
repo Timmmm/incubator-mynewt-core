@@ -20,6 +20,10 @@
 #ifndef H_BLE_HS_PRIV_
 #define H_BLE_HS_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <assert.h>
 #include <inttypes.h>
 #include "ble_att_cmd_priv.h"
@@ -138,6 +142,10 @@ void ble_hs_notifications_sched(void);
 #else
     #define BLE_HS_DBG_ASSERT(x)
     #define BLE_HS_DBG_ASSERT_EVAL(x) ((void)(x))
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

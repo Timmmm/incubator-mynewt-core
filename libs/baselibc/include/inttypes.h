@@ -5,6 +5,10 @@
 #ifndef _INTTYPES_H
 #define _INTTYPES_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <klibc/extern.h>
 #include <stdint.h>
 #include <stddef.h>
@@ -221,6 +225,10 @@ __extern uintmax_t strntoumax(const char *, char **, int, size_t);
 #define SCNxMAX	 __PRI64_RANK "x"
 #define SCNxPTR  __PRIPTR_RANK "x"
 
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif				/* _INTTYPES_H */

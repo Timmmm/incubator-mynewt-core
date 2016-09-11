@@ -19,6 +19,10 @@
 #ifndef __SYS_MN_SOCKET_H_
 #define __SYS_MN_SOCKET_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 
 /*
@@ -142,5 +146,9 @@ int mn_close(struct mn_socket *);
  * Address conversion
  */
 int mn_inet_pton(int af, const char *src, void *dst);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __SYS_MN_SOCKET_H_ */

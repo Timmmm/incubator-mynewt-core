@@ -7,6 +7,10 @@
 #ifndef lstring_h
 #define lstring_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #include "lgc.h"
 #include "lobject.h"
@@ -30,5 +34,9 @@ LUAI_FUNC void luaS_resize (lua_State *L, int newsize);
 LUAI_FUNC Udata *luaS_newudata (lua_State *L, size_t s, Table *e);
 LUAI_FUNC TString *luaS_newlstr (lua_State *L, const char *str, size_t l);
 LUAI_FUNC TString *luaS_newrolstr (lua_State *L, const char *str, size_t l);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -7,6 +7,10 @@
 #ifndef lstate_h
 #define lstate_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "lua.h"
 
 #include "lobject.h"
@@ -166,6 +170,10 @@ union GCObject {
 
 LUAI_FUNC lua_State *luaE_newthread (lua_State *L);
 LUAI_FUNC void luaE_freethread (lua_State *L, lua_State *L1);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 

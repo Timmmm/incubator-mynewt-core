@@ -20,6 +20,10 @@
 #ifndef H_BLE_LL_
 #define H_BLE_LL_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "stats/stats.h"
 #include "hal/hal_cputime.h"
 #include "os/os_eventq.h"
@@ -415,6 +419,10 @@ extern uint64_t g_bletest_SKDm;
 extern uint64_t g_bletest_SKDs;
 extern uint32_t g_bletest_IVm;
 extern uint32_t g_bletest_IVs;
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* H_LL_ */

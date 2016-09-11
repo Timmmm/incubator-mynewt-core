@@ -7,6 +7,10 @@
 #ifndef ldo_h
 #define ldo_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #include "lobject.h"
 #include "lstate.h"
@@ -52,6 +56,10 @@ LUAI_FUNC void luaD_throw (lua_State *L, int errcode);
 LUAI_FUNC int luaD_rawrunprotected (lua_State *L, Pfunc f, void *ud);
 
 LUAI_FUNC void luaD_seterrorobj (lua_State *L, int errcode, StkId oldtop);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 

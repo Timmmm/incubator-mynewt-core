@@ -20,6 +20,10 @@
 #ifndef H_TESTUTIL_PRIV_
 #define H_TESTUTIL_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stddef.h>
 #include <inttypes.h>
 
@@ -30,5 +34,9 @@ void tu_case_abort(void);
 
 extern tu_post_test_fn_t *tu_case_post_test_cb;
 extern void *tu_case_post_test_cb_arg;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

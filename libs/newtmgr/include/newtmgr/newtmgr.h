@@ -20,6 +20,10 @@
 #ifndef _NEWTMGR_H_
 #define _NEWTMGR_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <json/json.h>
 #include <inttypes.h>
 #include <os/os.h>
@@ -134,5 +138,9 @@ int nmgr_transport_init(struct nmgr_transport *nt,
 int nmgr_rx_req(struct nmgr_transport *nt, struct os_mbuf *req);
 int nmgr_rsp_extend(struct nmgr_hdr *, struct os_mbuf *, void *data, uint16_t);
 int nmgr_group_register(struct nmgr_group *group);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _NETMGR_H */

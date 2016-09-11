@@ -20,6 +20,10 @@
 #ifndef __FS_H__
 #define __FS_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stddef.h>
 #include <inttypes.h>
 
@@ -74,5 +78,9 @@ int fs_dirent_is_dir(const struct fs_dirent *);
 #define FS_EEXIST       11  /* File or directory already exists */
 #define FS_EACCESS      12  /* Operation prohibited by file open mode */
 #define FS_EUNINIT      13  /* File system not initialized */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

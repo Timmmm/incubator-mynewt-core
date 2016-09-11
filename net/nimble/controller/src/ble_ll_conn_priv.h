@@ -20,6 +20,10 @@
 #ifndef H_BLE_LL_CONN_PRIV_
 #define H_BLE_LL_CONN_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "controller/ble_ll_conn.h"
 
 /*
@@ -157,5 +161,9 @@ void ble_ll_conn_auth_pyld_timer_start(struct ble_ll_conn_sm *connsm);
 
 int ble_ll_hci_cmd_rx(uint8_t *cmd, void *arg);
 int ble_ll_hci_acl_rx(struct os_mbuf *om, void *arg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* H_BLE_LL_CONN_PRIV_ */

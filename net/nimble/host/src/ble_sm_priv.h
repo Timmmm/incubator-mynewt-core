@@ -20,6 +20,10 @@
 #ifndef H_BLE_SM_PRIV_
 #define H_BLE_SM_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "os/queue.h"
 #include "nimble/nimble_opt.h"
@@ -480,6 +484,10 @@ int ble_sm_init(void);
 
 #define ble_sm_init() 0
 
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

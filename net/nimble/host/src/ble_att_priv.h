@@ -20,6 +20,10 @@
 #ifndef H_BLE_ATT_PRIV_
 #define H_BLE_ATT_PRIV_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "stats/stats.h"
 #include "os/queue.h"
@@ -293,5 +297,9 @@ int ble_att_clt_tx_indicate(uint16_t conn_handle,
                             const struct ble_att_indicate_req *req,
                             struct os_mbuf *txom);
 int ble_att_clt_rx_indicate(uint16_t conn_handle, struct os_mbuf **rxom);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

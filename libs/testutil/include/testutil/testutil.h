@@ -20,6 +20,10 @@
 #ifndef H_TESTUTIL_
 #define H_TESTUTIL_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include <setjmp.h>
 
@@ -167,6 +171,10 @@ extern jmp_buf tu_case_jb;
 #define ASSERT_IF_TEST(expr) assert(expr)
 #else
 #define ASSERT_IF_TEST(expr)
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

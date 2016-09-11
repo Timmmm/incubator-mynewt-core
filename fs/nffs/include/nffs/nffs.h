@@ -20,6 +20,10 @@
 #ifndef H_NFFS_
 #define H_NFFS_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stddef.h>
 #include <inttypes.h>
 
@@ -57,5 +61,9 @@ struct nffs_area_desc {
 int nffs_init(void);
 int nffs_detect(const struct nffs_area_desc *area_descs);
 int nffs_format(const struct nffs_area_desc *area_descs);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

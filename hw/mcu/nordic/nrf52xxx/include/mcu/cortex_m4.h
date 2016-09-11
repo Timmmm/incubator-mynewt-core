@@ -20,12 +20,20 @@
 #ifndef __MCU_CORTEX_M4_H__
 #define __MCU_CORTEX_M4_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "mcu/nrf52.h"
 
 #if defined(BSP_HAS_32768_XTAL)
 #define OS_TICKS_PER_SEC    (128)
 #else
 #define OS_TICKS_PER_SEC    (1000)
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* __MCU_CORTEX_M4_H__ */

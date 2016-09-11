@@ -5,6 +5,10 @@
 #ifndef _STDIO_H
 #define _STDIO_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <klibc/extern.h>
 #include <klibc/inline.h>
 #include <stdarg.h>
@@ -120,5 +124,9 @@ struct MemFile
 
 FILE *fmemopen_w(struct MemFile* storage, char *buffer, size_t size);
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif				/* _STDIO_H */

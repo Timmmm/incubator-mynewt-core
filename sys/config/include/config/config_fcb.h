@@ -19,6 +19,10 @@
 #ifndef __SYS_CONFIG_FCB_H_
 #define __SYS_CONFIG_FCB_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "config/config.h"
 
 struct conf_fcb {
@@ -28,5 +32,9 @@ struct conf_fcb {
 
 int conf_fcb_src(struct conf_fcb *fcb);
 int conf_fcb_dst(struct conf_fcb *fcb);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __SYS_CONFIG_FCB_H_ */

@@ -20,6 +20,10 @@
 #ifndef H_BLE_LL_CONN_
 #define H_BLE_LL_CONN_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "os/os.h"
 #include "nimble/ble.h"
 #include "nimble/hci_common.h"
@@ -279,5 +283,9 @@ struct ble_ll_conn_sm
  *
  */
 struct ble_ll_conn_sm *ble_ll_conn_find_active_conn(uint16_t handle);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* H_BLE_LL_CONN_ */

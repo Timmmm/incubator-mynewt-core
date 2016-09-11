@@ -19,6 +19,10 @@
 #ifndef __SHELL_H__
 #define __SHELL_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <os/os.h>
 
 typedef int (*shell_cmd_func_t)(int argc, char **argv);
@@ -45,5 +49,9 @@ int shell_task_init(uint8_t prio, os_stack_t *stack, uint16_t stack_size,
 
 int shell_cmd_list_lock(void);
 int shell_cmd_list_unlock(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __SHELL_H__ */

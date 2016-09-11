@@ -20,6 +20,10 @@
 #ifndef _JSON_H_
 #define _JSON_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdbool.h>
 #include <stdint.h>
 #include <ctype.h>
@@ -241,5 +245,9 @@ int json_read_array(struct json_buffer *, const struct json_array_t *);
         .addr.array.arr.objects.stride = sizeof(a[0]), \
         .addr.array.count = n, \
         .addr.array.maxlen = (int)(sizeof(a)/sizeof(a[0]))
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _JSON_H_ */

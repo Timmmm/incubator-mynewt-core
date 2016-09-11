@@ -20,6 +20,10 @@
 #ifndef H_BLE_HS_TEST_UTIL_
 #define H_BLE_HS_TEST_UTIL_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "host/ble_gap.h"
 #include "ble_hs_priv.h"
@@ -192,5 +196,9 @@ void ble_hs_test_util_assert_mbufs_freed(
     const struct ble_hs_test_util_mbuf_params *params);
 void ble_hs_test_util_post_test(void *arg);
 void ble_hs_test_util_init(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

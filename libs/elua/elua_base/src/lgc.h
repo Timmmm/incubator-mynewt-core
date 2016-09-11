@@ -7,6 +7,10 @@
 #ifndef lgc_h
 #define lgc_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 #include "lobject.h"
 
@@ -132,5 +136,9 @@ LUAI_FUNC void luaC_linkupval (lua_State *L, UpVal *uv);
 LUAI_FUNC void luaC_barrierf (lua_State *L, GCObject *o, GCObject *v);
 LUAI_FUNC void luaC_barrierback (lua_State *L, Table *t);
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

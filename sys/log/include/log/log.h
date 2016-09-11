@@ -19,6 +19,10 @@
 #ifndef __LOG_H__
 #define __LOG_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "log/ignore.h"
 #include "util/cbmem.h"
 
@@ -203,6 +207,10 @@ extern const struct log_handler log_fcb_handler;
 /* Private */
 #ifdef NEWTMGR_PRESENT
 int log_nmgr_register_group(void);
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* __LOG_H__ */

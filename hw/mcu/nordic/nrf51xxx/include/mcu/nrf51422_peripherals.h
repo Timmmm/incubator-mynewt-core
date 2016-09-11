@@ -31,6 +31,10 @@
 #ifndef _NRF51422_PERIPHERALS_H
 #define _NRF51422_PERIPHERALS_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 
 /* Software Interrupts */
 #define SWI_PRESENT
@@ -112,5 +116,9 @@
 #define LPCOMP_PRESENT
 #define LPCOMP_COUNT 1
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif      // _NRF51422_PERIPHERALS_H

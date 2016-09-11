@@ -20,6 +20,10 @@
 #ifndef H_BLE_SM_
 #define H_BLE_SM_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "nimble/nimble_opt.h"
 
@@ -96,6 +100,10 @@ int ble_sm_inject_io(uint16_t conn_handle, struct ble_sm_io *pkey);
 #else
 #define ble_sm_inject_io(conn_handle, pkey) \
     ((void)(conn_handle), BLE_HS_ENOTSUP)
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

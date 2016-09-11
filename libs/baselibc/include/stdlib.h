@@ -5,6 +5,10 @@
 #ifndef _STDLIB_H
 #define _STDLIB_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <klibc/extern.h>
 #include <klibc/inline.h>
 #include <stddef.h>
@@ -97,5 +101,9 @@ __extern_inline void srandom(unsigned int __s)
 {
 	srand48(__s);
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif				/* _STDLIB_H */

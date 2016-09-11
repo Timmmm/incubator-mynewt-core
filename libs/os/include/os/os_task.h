@@ -20,6 +20,10 @@
 #ifndef _OS_TASK_H
 #define _OS_TASK_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "os/os.h"
 #include "os/os_sanity.h" 
 #include "os/queue.h"
@@ -110,5 +114,9 @@ struct os_task_info {
 struct os_task *os_task_info_get_next(const struct os_task *, 
         struct os_task_info *);
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _OS_TASK_H */

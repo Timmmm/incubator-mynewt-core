@@ -20,6 +20,10 @@
 #ifndef _OS_MUTEX_H_
 #define _OS_MUTEX_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "os/os.h"
 #include "os/queue.h"
 
@@ -55,5 +59,9 @@ os_error_t os_mutex_release(struct os_mutex *mu);
 
 /* Pend (wait) for a mutex */
 os_error_t os_mutex_pend(struct os_mutex *mu, uint32_t timeout);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  /* _OS_MUTEX_H_ */

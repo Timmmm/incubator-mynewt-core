@@ -3,6 +3,10 @@
 #ifndef lrotable_h
 #define lrotable_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "lua.h"
 #include "llimits.h"
 #include "lobject.h"
@@ -72,6 +76,10 @@ void* luaR_getmeta(void *data);
 int luaR_isrotable(void *p);
 #else
 #define luaR_isrotable(p)     (0)
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif

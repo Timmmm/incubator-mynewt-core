@@ -3,6 +3,10 @@
 #ifndef __LEGC_H__
 #define __LEGC_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "lstate.h"
 
 // EGC operations modes
@@ -12,6 +16,10 @@
 #define EGC_ALWAYS            4   // always run EGC before an allocation
 
 void legc_set_mode(lua_State *L, int mode, unsigned limit);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 
